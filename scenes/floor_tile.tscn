@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://cecp163nfgjwc"]
+
+[ext_resource type="Texture2D" uid="uid://bqsx8f34yww5g" path="res://assets/floor tiles/1.png" id="1_icltx"]
+[ext_resource type="Script" path="res://scripts/hitbox_area.gd" id="2_6wbc6"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q51ig"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_icltx")
+}],
+"loop": true,
+"name": &"0",
+"speed": 5.0
+}]
+
+[node name="floor_tile" type="AnimatedSprite2D"]
+position = Vector2(212, 145)
+sprite_frames = SubResource("SpriteFrames_q51ig")
+animation = &"0"
+
+[node name="hitbox_area" type="Area2D" parent="."]
+collision_layer = 32768
+collision_mask = 32768
+script = ExtResource("2_6wbc6")
+
+[node name="highlight_box" type="Polygon2D" parent="hitbox_area"]
+modulate = Color(1, 1, 1, 0.388235)
+position = Vector2(1, 0)
+polygon = PackedVector2Array(32, -4, 0, 11, -32, -5, 0, -20)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="hitbox_area"]
+polygon = PackedVector2Array(-31, -5, 0, -20, 32, -4, 0, 11)
+
+[connection signal="mouse_entered" from="hitbox_area" to="hitbox_area" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="hitbox_area" to="hitbox_area" method="_on_mouse_exited"]

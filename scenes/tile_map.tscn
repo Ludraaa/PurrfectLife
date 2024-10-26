@@ -1,112 +1,25 @@
-[gd_scene load_steps=6 format=3 uid="uid://ctsggpybocs8y"]
+[gd_scene load_steps=5 format=3 uid="uid://ew2um1inqa6v"]
 
-[ext_resource type="Texture2D" uid="uid://bg5rxlxuir2ab" path="res://assets/floor_atlas.png" id="1_cp1ym"]
-[ext_resource type="Texture2D" uid="uid://5u0o8dd2njuu" path="res://assets/wall_atlas.png" id="2_ra1s2"]
+[ext_resource type="Script" path="res://scripts/TileMap.gd" id="1_ficry"]
+[ext_resource type="Texture2D" uid="uid://bg5rxlxuir2ab" path="res://assets/floor_atlas.png" id="1_rw7p8"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_udtwu"]
-texture = ExtResource("1_cp1ym")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y6tkj"]
+texture = ExtResource("1_rw7p8")
 texture_region_size = Vector2i(64, 40)
-0:0/0 = 0
-0:0/0/texture_origin = Vector2i(0, -5)
-1:0/0 = 0
-1:0/0/texture_origin = Vector2i(0, -5)
-2:0/0 = 0
-2:0/0/texture_origin = Vector2i(0, -5)
-3:0/0 = 0
-3:0/0/texture_origin = Vector2i(0, -5)
-0:1/0 = 0
-0:1/0/texture_origin = Vector2i(0, -5)
-1:1/0 = 0
-1:1/0/texture_origin = Vector2i(0, -5)
-2:1/0 = 0
-2:1/0/texture_origin = Vector2i(0, -5)
-3:1/0 = 0
-3:1/0/texture_origin = Vector2i(0, -5)
-1:2/0 = 0
-1:2/0/texture_origin = Vector2i(0, -5)
-2:2/0 = 0
-2:2/0/texture_origin = Vector2i(0, -5)
-0:2/0 = 0
-0:2/0/texture_origin = Vector2i(0, -5)
-0:3/0 = 0
-0:3/0/texture_origin = Vector2i(0, -5)
-1:3/0 = 0
-1:3/0/texture_origin = Vector2i(0, -5)
-3:2/0 = 0
-3:2/0/texture_origin = Vector2i(0, -5)
-0:4/0 = 0
-0:4/0/texture_origin = Vector2i(0, -5)
+2:4/0 = 0
 1:4/0 = 0
-1:4/0/texture_origin = Vector2i(0, -5)
-0:5/0 = 0
-0:5/0/texture_origin = Vector2i(0, -5)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j10u6"]
-texture = ExtResource("2_ra1s2")
-texture_region_size = Vector2i(40, 59)
-0:0/0 = 0
-0:0/0/texture_origin = Vector2i(12, 13)
-1:0/0 = 0
-1:0/0/texture_origin = Vector2i(12, 13)
-2:0/0 = 0
-2:0/0/texture_origin = Vector2i(-12, 13)
-0:1/0 = 0
-0:1/0/texture_origin = Vector2i(-12, 13)
-1:1/0 = 0
-1:1/0/texture_origin = Vector2i(-12, 13)
-2:1/0 = 0
-2:1/0/texture_origin = Vector2i(12, 13)
-0:2/0 = 0
-0:2/0/texture_origin = Vector2i(12, 13)
-1:2/0 = 0
-1:2/0/texture_origin = Vector2i(-12, 13)
-2:2/0 = 0
-2:2/0/texture_origin = Vector2i(-12, 13)
-3:0/0 = 0
-3:0/0/texture_origin = Vector2i(12, 13)
-4:0/0 = 0
-4:0/0/texture_origin = Vector2i(-12, 13)
-5:0/0 = 0
-5:0/0/texture_origin = Vector2i(12, 13)
-5:1/0 = 0
-5:1/0/texture_origin = Vector2i(-12, 13)
-4:1/0 = 0
-4:1/0/texture_origin = Vector2i(12, 13)
-3:1/0 = 0
-3:1/0/texture_origin = Vector2i(-12, 13)
-0:3/0 = 0
-0:3/0/texture_origin = Vector2i(-12, 13)
-1:3/0 = 0
-1:3/0/texture_origin = Vector2i(12, 13)
-2:3/0 = 0
-2:3/0/texture_origin = Vector2i(12, 13)
-
-[sub_resource type="TileSet" id="TileSet_cuwac"]
+[sub_resource type="TileSet" id="TileSet_804sc"]
 tile_shape = 1
 tile_layout = 5
 tile_offset_axis = 1
 tile_size = Vector2i(64, 32)
-sources/0 = SubResource("TileSetAtlasSource_udtwu")
-sources/1 = SubResource("TileSetAtlasSource_j10u6")
+sources/0 = SubResource("TileSetAtlasSource_y6tkj")
 
 [node name="TileMap" type="TileMap"]
 y_sort_enabled = true
-tile_set = SubResource("TileSet_cuwac")
+tile_set = SubResource("TileSet_804sc")
 format = 2
-layer_0/name = "Layer0"
 layer_0/y_sort_enabled = true
-layer_0/tile_data = PackedInt32Array(0, 0, 2, 1, 0, 2, 65536, 0, 2, 65537, 0, 2, 131072, 0, 2, 131073, 0, 2, 196608, 0, 2, 196609, 0, 2, 196610, 0, 2, 131074, 0, 2, 65538, 0, 2, 2, 0, 2, 3, 0, 2, 65539, 0, 2, 131075, 0, 2, 196611, 0, 2)
-layer_1/name = "Layer1"
-layer_1/enabled = true
-layer_1/modulate = Color(1, 1, 1, 1)
-layer_1/y_sort_enabled = true
-layer_1/y_sort_origin = 1
-layer_1/z_index = 1
-layer_1/tile_data = PackedInt32Array(262143, 65537, 2, 196607, 65537, 2, 131071, 65537, 2, 65535, 65537, 2, -65536, 65537, 3, -65535, 65537, 3, -65534, 65537, 3, -65533, 65537, 3)
-layer_2/name = "Layer2"
-layer_2/enabled = true
-layer_2/modulate = Color(1, 1, 1, 1)
-layer_2/y_sort_enabled = true
-layer_2/y_sort_origin = 2
-layer_2/z_index = 2
-layer_2/tile_data = PackedInt32Array(196606, 65537, 2, 131070, 65537, 2, 65534, 65537, 2, -2, 65537, 2, -65537, 65537, 3, -131072, 65537, 3, -131071, 65537, 3, -131070, 65537, 3)
+layer_0/tile_data = PackedInt32Array(65536, 131072, 4, 65537, 131072, 4, 131072, 131072, 4, 131073, 131072, 4, 131074, 131072, 4, 0, 131072, 4, 1, 131072, 4, 2, 131072, 4, 65538, 131072, 4, 65539, 131072, 4, 3, 131072, 4, 131075, 131072, 4)
+script = ExtResource("1_ficry")
