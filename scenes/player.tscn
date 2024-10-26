@@ -17,6 +17,7 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_0bgxp"]
 
 [node name="player" type="CharacterBody2D"]
+z_index = 4
 position = Vector2(0, -5)
 script = ExtResource("1_fqjs7")
 
@@ -29,6 +30,7 @@ metadata/_edit_lock_ = true
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -20)
 zoom = Vector2(2, 2)
+position_smoothing_enabled = true
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -39,7 +41,9 @@ metadata/_edit_lock_ = true
 [node name="Navigation" type="Node2D" parent="."]
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="Navigation"]
-target_desired_distance = 0.1
+path_desired_distance = 2.0
+target_desired_distance = 5.0
+path_max_distance = 10.0
 
 [node name="Timer" type="Timer" parent="Navigation"]
 wait_time = 0.1
