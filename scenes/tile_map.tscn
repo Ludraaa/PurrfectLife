@@ -1,19 +1,212 @@
-[gd_scene load_steps=7 format=3 uid="uid://ew2um1inqa6v"]
+[gd_scene load_steps=8 format=3 uid="uid://jdbc04uglh6b"]
 
-[ext_resource type="Script" path="res://scripts/TileMap.gd" id="1_ficry"]
+[ext_resource type="Script" path="res://scripts/tile_map.gd" id="1_gb0e8"]
 [ext_resource type="Texture2D" uid="uid://bg5rxlxuir2ab" path="res://assets/floor_atlas.png" id="1_rw7p8"]
 [ext_resource type="Texture2D" uid="uid://5u0o8dd2njuu" path="res://assets/wall_atlas.png" id="2_vk3bw"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y6tkj"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xwgxt"]
 texture = ExtResource("1_rw7p8")
 texture_region_size = Vector2i(64, 40)
-2:4/0 = 0
+0:0/0 = 0
+0:0/0/texture_origin = Vector2i(0, -4)
+1:0/0 = 0
+1:0/0/texture_origin = Vector2i(0, -4)
+2:0/0 = 0
+2:0/0/texture_origin = Vector2i(0, -4)
+3:0/0 = 0
+3:0/0/texture_origin = Vector2i(0, -4)
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+13:0/0 = 0
+14:0/0 = 0
+15:0/0 = 0
+0:1/0 = 0
+0:1/0/texture_origin = Vector2i(0, -4)
+1:1/0 = 0
+1:1/0/texture_origin = Vector2i(0, -4)
+2:1/0 = 0
+2:1/0/texture_origin = Vector2i(0, -4)
+3:1/0 = 0
+3:1/0/texture_origin = Vector2i(0, -4)
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+14:1/0 = 0
+15:1/0 = 0
+1:2/0 = 0
+1:2/0/texture_origin = Vector2i(0, -4)
+2:2/0 = 0
+2:2/0/texture_origin = Vector2i(0, -4)
+5:2/0 = 0
+6:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+0:3/0 = 0
+0:3/0/texture_origin = Vector2i(0, -4)
+1:3/0 = 0
+1:3/0/texture_origin = Vector2i(0, -4)
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+12:3/0 = 0
+13:3/0 = 0
+14:3/0 = 0
+15:3/0 = 0
+0:4/0 = 0
+0:4/0/texture_origin = Vector2i(0, -4)
 1:4/0 = 0
+1:4/0/texture_origin = Vector2i(0, -4)
+2:4/0 = 0
+2:4/0/texture_origin = Vector2i(0, -4)
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+14:4/0 = 0
+15:4/0 = 0
+0:5/0 = 0
+0:5/0/texture_origin = Vector2i(0, -4)
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+12:5/0 = 0
+13:5/0 = 0
+14:5/0 = 0
+15:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+12:6/0 = 0
+13:6/0 = 0
+14:6/0 = 0
+15:6/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+13:7/0 = 0
+14:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+4:10/0 = 0
+5:10/0 = 0
+6:10/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+9:10/0 = 0
+10:10/0 = 0
+11:10/0 = 0
+0:11/0 = 0
+1:11/0 = 0
+2:11/0 = 0
+3:11/0 = 0
+4:11/0 = 0
+5:11/0 = 0
+6:11/0 = 0
+7:11/0 = 0
+8:11/0 = 0
+9:11/0 = 0
+10:11/0 = 0
+11:11/0 = 0
+1:12/0 = 0
+2:12/0 = 0
+5:12/0 = 0
+6:12/0 = 0
+0:13/0 = 0
+1:13/0 = 0
+2:13/0 = 0
+3:13/0 = 0
+0:14/0 = 0
+1:14/0 = 0
+2:14/0 = 0
+3:14/0 = 0
+0:2/0 = 0
+0:2/0/texture_origin = Vector2i(0, -4)
+3:2/0 = 0
+3:2/0/texture_origin = Vector2i(0, -4)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_01jon"]
+[sub_resource type="TileSet" id="TileSet_1p323"]
+tile_shape = 1
+tile_layout = 5
+tile_offset_axis = 1
+tile_size = Vector2i(64, 32)
+sources/0 = SubResource("TileSetAtlasSource_xwgxt")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wlo6o"]
 texture = ExtResource("2_vk3bw")
 texture_region_size = Vector2i(40, 59)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
 2:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
 2:3/0 = 0
 0:4/0 = 0
 1:4/0 = 0
@@ -22,33 +215,25 @@ texture_region_size = Vector2i(40, 59)
 1:5/0 = 0
 0:6/0 = 0
 1:6/0 = 0
-3:2/0 = 0
-4:2/0 = 0
-3:3/0 = 0
-4:3/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_804sc"]
+[sub_resource type="TileSet" id="TileSet_g1stn"]
 tile_shape = 1
 tile_layout = 5
 tile_offset_axis = 1
 tile_size = Vector2i(64, 32)
-sources/0 = SubResource("TileSetAtlasSource_y6tkj")
-sources/1 = SubResource("TileSetAtlasSource_01jon")
+sources/0 = SubResource("TileSetAtlasSource_wlo6o")
 
-[node name="TileMap" type="TileMap"]
+[node name="TileMapLayers" type="Node2D"]
 y_sort_enabled = true
-tile_set = SubResource("TileSet_804sc")
-format = 2
-layer_0/name = "floor"
-layer_0/y_sort_enabled = true
-layer_0/tile_data = PackedInt32Array(0, 131072, 4, 65536, 131072, 4, 1, 131072, 4, 65537, 131072, 4, 2, 131072, 4, 65538, 131072, 4, 131074, 131072, 4, 131073, 131072, 4, 131072, 131072, 4, 131075, 131072, 4, 65539, 131072, 4, 3, 131072, 4)
-layer_1/name = "1"
-layer_1/y_sort_enabled = true
-layer_1/z_index = 1
-layer_2/name = "2"
-layer_2/y_sort_enabled = true
-layer_2/z_index = 2
-layer_3/name = "3"
-layer_3/y_sort_enabled = true
-layer_3/z_index = 3
-script = ExtResource("1_ficry")
+script = ExtResource("1_gb0e8")
+
+[node name="Floor" type="TileMapLayer" parent="."]
+y_sort_enabled = true
+tile_set = SubResource("TileSet_1p323")
+
+[node name="Layer1" type="TileMapLayer" parent="."]
+y_sort_enabled = true
+tile_set = SubResource("TileSet_g1stn")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)

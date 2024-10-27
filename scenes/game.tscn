@@ -1,20 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://ckbqvrwmu061c"]
+[gd_scene load_steps=2 format=3 uid="uid://dq6w3jjsac3jl"]
 
-[ext_resource type="Script" path="res://scripts/game.gd" id="1_0a28i"]
-[ext_resource type="PackedScene" uid="uid://ew2um1inqa6v" path="res://scenes/tile_map.tscn" id="1_ib8p0"]
-[ext_resource type="PackedScene" uid="uid://25y3j87kqw7a" path="res://scenes/player.tscn" id="2_v4fp1"]
+[ext_resource type="PackedScene" uid="uid://jdbc04uglh6b" path="res://scenes/tile_map.tscn" id="1_ib8p0"]
 
-[sub_resource type="NavigationPolygon" id="NavigationPolygon_68dih"]
-vertices = PackedVector2Array(546, -260, 554, 213, -410, 200, -413, -256)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(-413, -256, -410, 200, 554, 213, 546, -260)])
+[node name="Game" type="Node2D"]
 
-[node name="game" type="Node2D"]
-script = ExtResource("1_0a28i")
-
-[node name="TileMap" parent="." instance=ExtResource("1_ib8p0")]
-
-[node name="player" parent="." instance=ExtResource("2_v4fp1")]
-
-[node name="playerNavRegion" type="NavigationRegion2D" parent="."]
-navigation_polygon = SubResource("NavigationPolygon_68dih")
+[node name="TileMapLayers" parent="." instance=ExtResource("1_ib8p0")]
