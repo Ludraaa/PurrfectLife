@@ -1,0 +1,3 @@
+extends Node
+
+enum FLOORMODE {NONE, PLACING, DELETING}
