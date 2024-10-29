@@ -1,9 +1,7 @@
 extends Node2D
 
-#var floorPlaceholder = Vector2i(2, 4)
-@export var currentAction : Enums.FLOORMODE = Enums.FLOORMODE.NONE
-#var mousePos
-#var mouseTile0
+@export var currentFloorAction : Enums.FLOORMODE = Enums.FLOORMODE.NONE
+
 @export var hovering = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -17,31 +15,35 @@ func _process(delta: float) -> void:
 	
 	#Spawns a floor tile at the mouse location that can be placed down by clicking lmb
 	if Input.is_action_just_pressed("debug place floor"):
-		if currentAction != Enums.FLOORMODE.PLACING:
+		if currentFloorAction != Enums.FLOORMODE.PLACING:
 			print("Debug: Placing Tiles")
-			currentAction = Enums.FLOORMODE.PLACING
+			currentFloorAction = Enums.FLOORMODE.PLACING
 		else:
-			currentAction = Enums.FLOORMODE.NONE
+			currentFloorAction = Enums.FLOORMODE.NONE
 			hovering = false
+			Input.set_custom_mouse_cursor(Global.defaultCursor)
 			print("Debug: no action")
 		
 	#Deletes the hovered floor tile
 	if Input.is_action_just_pressed("debug delete floor"):
-		if currentAction != Enums.FLOORMODE.DELETING:
+		if currentFloorAction != Enums.FLOORMODE.DELETING:
 			print("Debug: Deleting Floor")
 			hovering = false
-			currentAction = Enums.FLOORMODE.DELETING
+			currentFloorAction = Enums.FLOORMODE.DELETING
 		else:
-			currentAction = Enums.FLOORMODE.NONE
+			currentFloorAction = Enums.FLOORMODE.NONE
 			print("Debug: no action")
 
 	
-	match(currentAction):
+	match(currentFloorAction):
 		Enums.FLOORMODE.DELETING:
 			if Global.floorLayer.get_node(str(Global.mousePos0)):
 				Global.floorLayer.get_node(str(Global.mousePos0)).redHighlight = true
-			if Input.is_action_just_pressed("lmb"):
-				Global.floorLayer.erase_cell(Global.mousePos0)
+				Input.set_custom_mouse_cursor(Global.deleteCursor)
+			else:
+				Input.set_custom_mouse_cursor(Global.deletionCursor)
+			if Input.is_action_just_pressed("lmb") and Global.floorLayer.get_node(str(Global.mousePos0)):
+				Global.floorLayer.get_node(str(Global.mousePos0)).queue_free()
 		Enums.FLOORMODE.PLACING:
 			if !hovering:
 				var floor = Global.floorTile.instantiate()
@@ -51,3 +53,5 @@ func _process(delta: float) -> void:
 				floor.get_node("timer").start(1)
 				Global.floorLayer.add_child(floor)
 				hovering = true
+		Enums.FLOORMODE.NONE:
+			Input.set_custom_mouse_cursor(Global.defaultCursor)

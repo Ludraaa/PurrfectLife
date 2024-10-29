@@ -1,0 +1,88 @@
+[gd_scene load_steps=8 format=3 uid="uid://bk6b0p508sjv2"]
+
+[ext_resource type="Script" path="res://scripts/game_ui.gd" id="1_p2sbv"]
+[ext_resource type="Texture2D" uid="uid://rr40h78f15tc" path="res://assets/curser_pack/time.png" id="2_pw54k"]
+
+[sub_resource type="FontFile" id="FontFile_p37gy"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/26/0/ascent = 0.0
+cache/0/26/0/descent = 0.0
+cache/0/26/0/underline_position = 0.0
+cache/0/26/0/underline_thickness = 0.0
+cache/0/26/0/scale = 1.0
+cache/0/32/0/ascent = 0.0
+cache/0/32/0/descent = 0.0
+cache/0/32/0/underline_position = 0.0
+cache/0/32/0/underline_thickness = 0.0
+cache/0/32/0/scale = 1.0
+
+[sub_resource type="Theme" id="Theme_tw0vc"]
+default_font = SubResource("FontFile_p37gy")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_etrqf"]
+content_margin_left = 3.0
+content_margin_top = 3.0
+content_margin_right = 3.0
+content_margin_bottom = 3.0
+bg_color = Color(0.226707, 0.226708, 0.226707, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.962129, 0.599966, 0.42791, 1)
+border_blend = true
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 2
+
+[sub_resource type="LabelSettings" id="LabelSettings_wjj5y"]
+font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_rkgfu"]
+font_size = 32
+
+[node name="GameUI" type="CanvasLayer"]
+script = ExtResource("1_p2sbv")
+
+[node name="TopLeftPanel" type="PanelContainer" parent="."]
+offset_right = 80.0
+offset_bottom = 36.0
+theme = SubResource("Theme_tw0vc")
+theme_override_styles/panel = SubResource("StyleBoxFlat_etrqf")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TopLeftPanel"]
+layout_mode = 2
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TopLeftPanel/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="TopLeftPanel/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+texture = ExtResource("2_pw54k")
+stretch_mode = 3
+
+[node name="TimeMinutes" type="Label" parent="TopLeftPanel/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+label_settings = SubResource("LabelSettings_wjj5y")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="TimeSeconds" type="Label" parent="TopLeftPanel/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+label_settings = SubResource("LabelSettings_rkgfu")
+horizontal_alignment = 2
+vertical_alignment = 1
