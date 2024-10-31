@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="floorData" load_steps=3 format=3 uid="uid://cwjf0k77oyg04"]
+
+[ext_resource type="Script" path="res://Resources/FloorTiles/floorData.gd" id="1_t25xj"]
+[ext_resource type="Texture2D" uid="uid://t3scobicigqo" path="res://assets/floor tiles/17.png" id="2_fvn8j"]
+
+[resource]
+script = ExtResource("1_t25xj")
+name = "Ornate Wooden Floor"
+id = 17
+texture = ExtResource("2_fvn8j")
+price = 0

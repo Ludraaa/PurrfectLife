@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="floorData" load_steps=3 format=3 uid="uid://c8p8rrnuimgd4"]
+
+[ext_resource type="Script" path="res://Resources/FloorTiles/floorData.gd" id="1_e1mfr"]
+[ext_resource type="Texture2D" uid="uid://xxkw1ix8xjea" path="res://assets/floor tiles/15.png" id="2_q0887"]
+
+[resource]
+script = ExtResource("1_e1mfr")
+name = "Big Stone Tiles"
+id = 15
+texture = ExtResource("2_q0887")
+price = 0

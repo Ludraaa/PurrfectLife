@@ -19,3 +19,11 @@ extends Node
 @export var deletionCursor : Resource = preload("res://assets/curser_pack/deletion.png")
 @export var zoomOutCursor : Resource = preload("res://assets/curser_pack/zoom_out.png")
 @export var zoomInCursor : Resource = preload("res://assets/curser_pack/zoom_in.png")
+
+@export var buildModeIcon : Resource = preload("res://assets/curser_pack/build_mode.png")
+@export var closeIcon : Resource = preload("res://assets/curser_pack/close.png")
+
+@export var itemSlot : Resource = preload("res://scenes/item_slot.tscn")
+
+@export var buildShop : Panel
+@export var currBuildShopTab : Enums.BUILDMODETAB

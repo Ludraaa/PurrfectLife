@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="floorData" load_steps=3 format=3 uid="uid://cps8fruofcvum"]
+
+[ext_resource type="Script" path="res://Resources/FloorTiles/floorData.gd" id="1_hly1w"]
+[ext_resource type="Texture2D" uid="uid://c5d1fku837dap" path="res://assets/floor tiles/4.png" id="2_oukbn"]
+
+[resource]
+script = ExtResource("1_hly1w")
+name = "Old Tiles"
+id = 4
+texture = ExtResource("2_oukbn")
+price = 0

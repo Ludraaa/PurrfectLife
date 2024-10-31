@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="floorData" load_steps=3 format=3 uid="uid://1ojctsdqeyo6"]
+
+[ext_resource type="Script" path="res://Resources/FloorTiles/floorData.gd" id="1_3ukgp"]
+[ext_resource type="Texture2D" uid="uid://csq2ly3ofltsf" path="res://assets/floor tiles/11.png" id="2_c45ly"]
+
+[resource]
+script = ExtResource("1_3ukgp")
+name = "Wooden Floor"
+id = 11
+texture = ExtResource("2_c45ly")
+price = 0

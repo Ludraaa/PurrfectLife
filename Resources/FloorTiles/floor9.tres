@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="floorData" load_steps=3 format=3 uid="uid://bbgglhsias8l7"]
+
+[ext_resource type="Script" path="res://Resources/FloorTiles/floorData.gd" id="1_cunjc"]
+[ext_resource type="Texture2D" uid="uid://dwgsrmtl1g4vs" path="res://assets/floor tiles/9.png" id="2_5rw0h"]
+
+[resource]
+script = ExtResource("1_cunjc")
+name = "Simple Concrete"
+id = 9
+texture = ExtResource("2_5rw0h")
+price = 0

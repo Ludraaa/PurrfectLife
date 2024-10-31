@@ -1,7 +1,7 @@
 extends Node2D
 
 @export var currentFloorAction : Enums.FLOORMODE = Enums.FLOORMODE.NONE
-
+@export var floorTypeToBePlaced : int = -1
 @export var hovering = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -13,17 +13,6 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	Global.mousePos0 = $Floor.local_to_map(Global.mousePos)
 	
-	#Spawns a floor tile at the mouse location that can be placed down by clicking lmb
-	if Input.is_action_just_pressed("debug place floor"):
-		if currentFloorAction != Enums.FLOORMODE.PLACING:
-			print("Debug: Placing Tiles")
-			currentFloorAction = Enums.FLOORMODE.PLACING
-		else:
-			currentFloorAction = Enums.FLOORMODE.NONE
-			hovering = false
-			Input.set_custom_mouse_cursor(Global.defaultCursor)
-			print("Debug: no action")
-		
 	#Deletes the hovered floor tile
 	if Input.is_action_just_pressed("debug delete floor"):
 		if currentFloorAction != Enums.FLOORMODE.DELETING:
@@ -48,10 +37,21 @@ func _process(delta: float) -> void:
 			if !hovering:
 				var floor = Global.floorTile.instantiate()
 				floor.preview = true
-				floor.changeTexture(1)
+				floor.changeTexture(floorTypeToBePlaced)
 				floor.visible = false
 				floor.get_node("timer").start(1)
+				floor.typeAtPlacement = floorTypeToBePlaced
 				Global.floorLayer.add_child(floor)
 				hovering = true
 		Enums.FLOORMODE.NONE:
 			Input.set_custom_mouse_cursor(Global.defaultCursor)
+
+func placeFloor(type : int):
+	if type != floorTypeToBePlaced:
+		floorTypeToBePlaced = type
+		currentFloorAction = Enums.FLOORMODE.PLACING
+	else:
+		currentFloorAction = Enums.FLOORMODE.NONE
+		hovering = false
+		Input.set_custom_mouse_cursor(Global.defaultCursor)
+		print("Debug: no action")

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="floorData" load_steps=3 format=3 uid="uid://b0fbtgmspqx0y"]
+
+[ext_resource type="Script" path="res://Resources/FloorTiles/floorData.gd" id="1_mp7nj"]
+[ext_resource type="Texture2D" uid="uid://dkiy1nnyllapn" path="res://assets/floor tiles/3.png" id="2_g4p6h"]
+
+[resource]
+script = ExtResource("1_mp7nj")
+name = "White Carpet"
+id = 3
+texture = ExtResource("2_g4p6h")

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="floorData" load_steps=3 format=3 uid="uid://pyq71pnrp7s8"]
+
+[ext_resource type="Script" path="res://Resources/FloorTiles/floorData.gd" id="1_mufru"]
+[ext_resource type="Texture2D" uid="uid://qk2m4fnixtfc" path="res://assets/floor tiles/14.png" id="2_d5un8"]
+
+[resource]
+script = ExtResource("1_mufru")
+name = "Grid Tiles"
+id = 14
+texture = ExtResource("2_d5un8")
+price = 0

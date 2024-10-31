@@ -26,6 +26,10 @@ Constants="*res://Globals/constants.gd"
 window/stretch/mode="viewport"
 mouse_cursor/custom_image="res://assets/curser_pack/curser.png"
 
+[gui]
+
+timers/tooltip_delay_sec=0.3
+
 [input]
 
 lmb={
@@ -78,3 +82,4 @@ right={
 
 textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="mobile"
+2d/snap/snap_2d_transforms_to_pixel=true

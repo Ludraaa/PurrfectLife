@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="floorData" load_steps=3 format=3 uid="uid://dwgatpv6eorhn"]
+
+[ext_resource type="Script" path="res://Resources/FloorTiles/floorData.gd" id="1_6fiit"]
+[ext_resource type="Texture2D" uid="uid://ba8blpw3kwpyd" path="res://assets/floor tiles/12.png" id="2_p160r"]
+
+[resource]
+script = ExtResource("1_6fiit")
+name = "Stone Bricks"
+id = 12
+texture = ExtResource("2_p160r")
+price = 0

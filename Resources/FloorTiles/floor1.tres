@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="floorData" load_steps=3 format=3 uid="uid://20aecr7mhh6w"]
+
+[ext_resource type="Script" path="res://Resources/FloorTiles/floorData.gd" id="1_cyqri"]
+[ext_resource type="Texture2D" uid="uid://bqsx8f34yww5g" path="res://assets/floor tiles/1.png" id="2_yd8gg"]
+
+[resource]
+script = ExtResource("1_cyqri")
+name = "Small Tiles"
+id = 1
+texture = ExtResource("2_yd8gg")

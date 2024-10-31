@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="floorData" load_steps=3 format=3 uid="uid://dvc8yp8ib4b2v"]
+
+[ext_resource type="Script" path="res://Resources/FloorTiles/floorData.gd" id="1_6qxbk"]
+[ext_resource type="Texture2D" uid="uid://eoej68h6xqvm" path="res://assets/floor tiles/13.png" id="2_fhb77"]
+
+[resource]
+script = ExtResource("1_6qxbk")
+name = "Wooden Squares"
+id = 13
+texture = ExtResource("2_fhb77")
+price = 0
